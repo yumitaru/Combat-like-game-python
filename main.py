@@ -1,4 +1,5 @@
 import pygame
+from InputHandler import InputHandler
 
 
 # Main of the whole AGV Simulator, calls loop declared deeper into Simulation
@@ -9,12 +10,15 @@ def main():
     clock = pygame.time.Clock()
     running = True
 
+    handler = InputHandler()
+
     while running:
         # poll for events
         # pygame.QUIT event means the user clicked X to close your window
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            handler.handle_input(event)
 
         # fill the screen with a color to wipe away anything from last frame
         screen.fill("purple")
