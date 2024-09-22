@@ -12,6 +12,8 @@ def main():
 
     handler = InputHandler()
 
+    rect = pygame.rect.Rect(640, 360, 60, 60)
+
     while running:
         # poll for events
         # pygame.QUIT event means the user clicked X to close your window
@@ -23,8 +25,9 @@ def main():
         # fill the screen with a color to wipe away anything from last frame
         screen.fill("purple")
 
+        color = (255, 0, 0)
         # RENDER YOUR GAME HERE
-
+        pygame.draw.rect(screen, color, rect)
         # flip() the display to put your work on screen
         pygame.display.flip()
 

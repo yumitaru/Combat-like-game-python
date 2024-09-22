@@ -1,12 +1,19 @@
 import pygame
 
+from Commands.CommandBackward import CommandBackward
+from Commands.CommandFire import CommandFire
+from Commands.CommandForward import CommandForward
+from Commands.CommandLeft import CommandLeft
+from Commands.CommandRight import CommandRight
+
+
 class InputHandler:
     def __init__(self):
-        self.buttonW_ = None
-        self.buttonA_ = None
-        self.buttonS_ = None
-        self.buttonD_ = None
-        self.buttonSpace_ = None
+        self.buttonW_ = CommandForward
+        self.buttonA_ = CommandLeft
+        self.buttonS_ = CommandBackward
+        self.buttonD_ = CommandRight
+        self.buttonSpace_ = CommandFire
 
     def handle_input(self, event: pygame.event.Event):
 
