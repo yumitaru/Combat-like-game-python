@@ -1,4 +1,4 @@
-from Command import Command
+from Commands.Command import Command
 
         ##### COMPLETE ROTATE LEFT FUNC ########
 class CommandLeft(Command):
