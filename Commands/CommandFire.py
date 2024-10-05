@@ -1,4 +1,4 @@
-from Command import Command
+from Commands.Command import Command
 
         ##### COMPLETE FIRE FUNC ########
 class CommandFire(Command):
