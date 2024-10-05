@@ -21,17 +21,12 @@ class InputHandler:
         ####### ADD EXECUTE TO KEYS########
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
-                #self.buttonW_.execute()
-                print("w")
+                self.buttonW_.execute(self)
             elif event.key == pygame.K_a:
-                #self.buttonA_.execute()
-                print("a")
+                self.buttonA_.execute(self)
             elif event.key == pygame.K_s:
-                #self.buttonS_.execute()
-                print("s")
+                self.buttonS_.execute(self)
             elif event.key == pygame.K_d:
-                #self.buttonD_.execute()
-                print("d")
+                self.buttonD_.execute(self)
             elif event.key == pygame.K_SPACE:
-                #self.buttonSpace_.execute()
-                print("space")
+                self.buttonSpace_.execute(self)
