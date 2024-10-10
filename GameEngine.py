@@ -21,7 +21,7 @@ class GameEngine:
     def update(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                self.running = False
             self.inputHandler.handle_input(event)
     def render(self):
         self.screen.fill("purple")
@@ -32,7 +32,7 @@ class GameEngine:
         # flip() the display to put your work on screen
         pygame.display.flip()
 
-        self.clock.tick(60)  # limits FPS to 60
+        # self.clock.tick(60)  # limits FPS to 60
     def quit(self):
         pygame.quit()
     def run(self):

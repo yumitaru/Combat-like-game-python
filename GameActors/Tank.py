@@ -1,7 +1,8 @@
 import pygame
+from GameActor import GameActor
 
 
-class Tank:
+class Tank(GameActor):
     def __init__(self):
         self.color = (255, 0, 0)
         self.width = 60
