@@ -10,22 +10,17 @@ from GameActors.GameActor import GameActor
 
 class InputHandler:
     def __init__(self):
-        self.buttonW_ = CommandForward
-        self.buttonA_ = CommandLeft
-        self.buttonS_ = CommandBackward
-        self.buttonD_ = CommandRight
-        self.buttonSpace_ = CommandFire
+        self.forward = CommandForward()
+        self.left = CommandLeft()
+        self.backward = CommandBackward()
+        self.right = CommandRight()
+        self.fire = CommandFire()
 
     def handle_input(self, event: pygame.event.Event, actor: GameActor):
         ####### ADD EXECUTE TO KEYS########
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_w:
-                self.buttonW_.execute(self, actor)
-            elif event.key == pygame.K_a:
-                self.buttonA_.execute(self, actor)
-            elif event.key == pygame.K_s:
-                self.buttonS_.execute(self, actor)
-            elif event.key == pygame.K_d:
-                self.buttonD_.execute(self, actor)
-            elif event.key == pygame.K_SPACE:
-                self.buttonSpace_.execute(self, actor)
+            self.forward.execute(actor, event)
+            self.left.execute(actor, event)
+            self.backward.execute(actor, event)
+            self.right.execute(actor, event)
+            self.fire.execute(actor, event)

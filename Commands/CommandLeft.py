@@ -1,8 +1,13 @@
+import pygame
+
 from Commands.Command import Command
 from GameActors.GameActor import GameActor
 
         ##### COMPLETE ROTATE LEFT FUNC ########
 class CommandLeft(Command):
-    def execute(self, actor: GameActor):
+    def __init__(self):
+        self.key = pygame.K_a
+    def execute(self, actor: GameActor, event: pygame.event.Event):
         # self.rotateLeft()
-        print("A")
+        if event.key == self.key:
+            print("A")
