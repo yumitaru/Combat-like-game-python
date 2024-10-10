@@ -1,5 +1,5 @@
 import pygame
-from GameActor import GameActor
+from GameActors.GameActor import GameActor
 
 
 class Tank(GameActor):
@@ -7,6 +7,9 @@ class Tank(GameActor):
         self.color = (255, 0, 0)
         self.width = 60
         self.height = 60
-        self.position = float(640, 360)
-        self.rect = pygame.rect.Rect(640, 360, 60, 60)
+        self.positionX = 640
+        self.positionY = 360
+        self.rect = pygame.rect.Rect(self.positionX, self.positionY, 60, 60)
         self.buttonSpace_ = None
+    def draw(self, screen: pygame.display):
+        pygame.draw.rect(screen, self.color, self.rect, 0)

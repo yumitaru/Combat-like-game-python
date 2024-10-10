@@ -1,6 +1,7 @@
 import pygame
 
 from InputHandler import InputHandler
+from GameActors.Tank import Tank
 
 
 class GameEngine:
@@ -9,9 +10,11 @@ class GameEngine:
         self.clock = None
         self.running = None
         self.inputHandler = None
+        self.tank = None
     def initWindow(self):
         pygame.init()
         self.screen = pygame.display.set_mode((1280, 720))
+        self.tank = Tank()
     def initHandler(self):
         self.inputHandler = InputHandler()
     def initClock(self):
@@ -26,7 +29,7 @@ class GameEngine:
     def render(self):
         self.screen.fill("purple")
 
-
+        self.tank.draw(self.screen)
         # RENDER YOUR GAME HERE
         # pygame.draw.rect(self.screen, color)
         # flip() the display to put your work on screen
