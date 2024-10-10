@@ -2,5 +2,5 @@ import pygame
 
 
 class GameActor:
-    def __init__(self):
-        pass
+    def move(self):
+        raise NotImplementedError("Subclasses should implement this method.")

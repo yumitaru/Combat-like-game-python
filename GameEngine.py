@@ -25,7 +25,7 @@ class GameEngine:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
-            self.inputHandler.handle_input(event)
+            self.inputHandler.handle_input(event, self.tank)
     def render(self):
         self.screen.fill("purple")
 

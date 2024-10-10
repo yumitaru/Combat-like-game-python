@@ -6,3 +6,4 @@ class CommandForward(Command):
     def execute(self, actor: GameActor):
         # self.goForward()
         print("W")
+        actor.move()

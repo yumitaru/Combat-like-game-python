@@ -13,3 +13,5 @@ class Tank(GameActor):
         self.buttonSpace_ = None
     def draw(self, screen: pygame.display):
         pygame.draw.rect(screen, self.color, self.rect, 0)
+    def move(self):
+        self.rect.move_ip(10,10)
